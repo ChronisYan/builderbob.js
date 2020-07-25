@@ -23,10 +23,3 @@ const loadStructure = (): Promise<string | Error> => {
         })
     })
 }
-
-const my_tree = loadStructure().then(data => {
-    console.log(data);
-}).catch(err => {
-    console.log(err)
-})
-

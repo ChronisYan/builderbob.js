@@ -27,21 +27,10 @@ class FSN implements Tree {
         return this.path;
     }
 
-    addChild(dirName: string | string[]): void {
-        // for single element
-        if (!Array.isArray(dirName)) {
-            const node = new FSN(dirName);
-            node.addPath(this);
-            this.children.push(node);
-            return;
-        }
-
-        dirName.forEach(dir => {
-            const node = new FSN(dir);
-            node.addPath(this);
-            this.children.push(node)
-        })
-
+    addChild(dirName: string): void {
+        const node = new FSN(dirName);
+        node.addPath(this);
+        this.children.push(node);
         return;
     }
 }
