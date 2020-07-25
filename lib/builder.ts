@@ -1,6 +1,4 @@
 import * as fs from 'fs';
-import * as path from 'path'; // use path.posix:
-import { Tree, FSN } from './tree'
 
 const DEFAULTSTRUCTUREFILE = "/.bob";
 const ROOTDIR = process.cwd();
@@ -32,6 +30,3 @@ const my_tree = loadStructure().then(data => {
     console.log(err)
 })
 
-const validDirName = () => {
-
-}
