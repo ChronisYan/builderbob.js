@@ -2,7 +2,7 @@
   "name": "builder-bob",
   "version": "1.0.0",
   "description": "automate file structures",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "start:build": "tsc -w",
     "start:run": "nodemon bin/index.js",

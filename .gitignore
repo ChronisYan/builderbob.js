@@ -115,3 +115,6 @@ dist
 .pnp.*
 
 .prettierrc
+test.js
+.bob
+.bob.json
