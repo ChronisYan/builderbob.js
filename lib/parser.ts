@@ -29,8 +29,8 @@ export default (data: string, absPath: string): Tree | Error => {
             i++;
             continue
         };
-        if (afterName && (array[i] !== "{" || array[i] !== ",")) return new Error(`Invalid Character in .bob '${array[i]}'`);
-        if (!afterName && array[i] !== "\"" && array[i] !== "}") return new Error(`Invalid Character in .bob '${array[i]}'`);
+        if ((afterName && array[i] !== "{") || (afterName && array[i] !== ",")) return new Error(`Invalid Character in .bob '${array[i]}'`);
+        if ((!afterName && array[i] !== "\"") || (!afterName && array[i] !== "}")) return new Error(`Invalid Character in .bob '${array[i]}'`);
         if (array[i] === "}") nestedLevel--;
         if (array[i] === "{") {
             nestedLevel++;
