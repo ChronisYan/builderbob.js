@@ -1,5 +1,6 @@
 interface Tree {
     value: string;
+    isFile: boolean;
     children: Tree[];
     addPath(parent: Tree): void;
 }
@@ -8,10 +9,12 @@ interface Tree {
 class FSN implements Tree {
     value: string;
     children: Tree[];
+    isFile: boolean;
     private path: string | null;
 
     constructor(value: string) {
         this.value = value;
+        this.isFile = false;
         this.path = null;
         this.children = [];
     }
