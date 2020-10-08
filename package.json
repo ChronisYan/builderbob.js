@@ -11,9 +11,9 @@
   "author": "chronisyan",
   "license": "ISC",
   "dependencies": {
-    "@types/node": "^14.0.25",
-    "@types/yargs": "^15.0.5",
-    "concurrently": "^5.2.0",
+    "@types/node": "^14.11.7",
+    "@types/yargs": "^15.0.8",
+    "concurrently": "^5.3.0",
     "nodemon": "^2.0.4",
     "yargs": "^15.4.1"
   }
